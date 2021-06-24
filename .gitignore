@@ -1,6 +1,6 @@
 node_modules
 *.log
-build
+# build
 examples/*/__tests__/__image_snapshots__
 examples/*/__tests__/__snapshots__
 examples/*/__tests__/__traces__

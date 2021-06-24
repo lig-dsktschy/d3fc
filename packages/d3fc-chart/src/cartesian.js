@@ -78,7 +78,7 @@ export default (...args) => {
                 .attr('use-device-pixel-ratio', useDevicePixelRatio)
                 .on('draw', (event, d) => {
                     const { child, pixelRatio } = event.detail;
-                    webglPlotArea.context(isContextLost ? null : child.getContext('webgl'))
+                    webglPlotArea.context(isContextLost ? null : child.getContext('webgl', { preserveDrawingBuffer: true }))
                         .pixelRatio(pixelRatio)
                         .xScale(xScale)
                         .yScale(yScale);

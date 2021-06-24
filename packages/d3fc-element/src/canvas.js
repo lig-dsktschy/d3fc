@@ -6,7 +6,7 @@ export default class extends element(
         node.setAttribute('width', width);
         node.setAttribute('height', height);
         if (element.setWebglViewport) {
-            const context = node.getContext('webgl');
+            const context = node.getContext('webgl', { preserveDrawingBuffer: true });
             context.viewport(0, 0, width, height);
         }
     }
